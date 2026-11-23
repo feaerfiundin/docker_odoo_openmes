@@ -21,5 +21,3 @@ mis_builder
 # Modulo proprietario, già scompattato in repos_apps (il nome è solo un esempio)
 mio_modulo_proprietario #apps
 
-# Forzare la ricerca in repos_git se lo stesso nome esiste anche in repos_apps
-web_responsive #git
