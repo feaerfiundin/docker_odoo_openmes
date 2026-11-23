@@ -1,0 +1,24 @@
+# repos.txt — repository GitHub da clonare con git_repos.sh
+#
+# Formato: una riga per repository, con repository e branch separati da uno spazio.
+#   owner/repo  branch            es. OCA/web 18.0
+#   URL         branch            es. https://github.com/OCA/server-tools.git 18.0
+#
+# Usa il branch della versione di Odoo che stai installando (18.0 per Odoo 18).
+# Le righe che iniziano con # sono commenti e vengono ignorate.
+# Un repository per riga: lo stesso repository su due branch diversi non è supportato.
+#
+# Esempio d'uso:
+#   sudo ./git_repos.sh clone -f repos.txt -d /home/odoo/addons/repos_git
+
+# OCA — moduli di utilità e di backend
+OCA/web 18.0
+OCA/server-tools 18.0
+OCA/queue 18.0
+
+# OCA — reporting e contabilità
+OCA/mis-builder 18.0
+OCA/account-financial-tools 18.0
+
+# Localizzazione italiana, con URL completo
+https://github.com/OCA/l10n-italy.git 18.0

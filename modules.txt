@@ -1,0 +1,25 @@
+# modules.txt — moduli Odoo da collegare alla cartella active con stack.sh
+#
+# Formato: un nome tecnico per riga (il nome della cartella del modulo, non il nome commerciale).
+#   nome_modulo            cerca in repos_git e repos_apps
+#   nome_modulo #git       cerca solo nei repository git
+#   nome_modulo #apps      cerca solo nelle app scompattate
+#
+# Le dipendenze vengono aggiunte automaticamente, ricorsivamente.
+# I moduli non trovati finiscono in da_revisionare.txt.
+# Le dipendenze non disponibili finiscono in dipendenze_mancanti.txt.
+# Le righe che iniziano con # sono commenti e vengono ignorate.
+#
+# Esempio d'uso:
+#   sudo ./stack.sh addon sync
+
+# OCA — dai repository in repos_git
+web_responsive
+queue_job
+mis_builder
+
+# Modulo proprietario, già scompattato in repos_apps (il nome è solo un esempio)
+mio_modulo_proprietario #apps
+
+# Forzare la ricerca in repos_git se lo stesso nome esiste anche in repos_apps
+web_responsive #git
